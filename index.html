@@ -6,21 +6,157 @@
     <title>01_HTML_</title>
   </head>
   <body>
+    <div id="top">블록과 인라인</div>
+
+    <h3>요소 성질</h3>
+    <h4>
+      블록 성질 : h1~h6(headline tag - 타이틀 파트), p(paragraph), div(divide -
+      공간을 형성, 그룹핑 작업)
+    </h4>
+    <p>블록 성질 -> 레고블록(상하로 쌓인다 -> 세로방향 정렬시)</p>
+
+    <h4>
+      인라인 성질 : a(anchor - 링크를 걸어줄때 사용 / href), img(image -
+      이미지를 넣을 때 사용) / src(source), alt(alterative - 웹 접근성 :
+      시각장애인을 위한 텍스트 설명. 150자까지만 허용) span(인라인 성질을 갖고
+      있는 그룹핑이 가능)
+
+      <p>인라인 성질 -> 인라인 스케이트 바퀴</p>
+    </h4>
+
     <div>
-      <h3 style="background-color: aqua">타이틀 태그</h3>
+      <h3 style="background-color: aqua">타이틀(headline) 태그(h1 ~ h6)</h3>
       <hr />
-      <h1>타이틀 1</h1>
-      <h2>타이틀 2</h2>
-      <h3>타이틀 3</h3>
-      <h4>타이틀 4</h4>
-      <h5>타이틀 5</h5>
-      <h6>타이틀 6</h6>
+      <h1>타이틀 1 - 폰트크기 32px(2em)</h1>
+      <h2>타이틀 2 - 폰트크기 24px(1.5em)</h2>
+      <h3>타이틀 3 - 폰트크기 18.72px(1.17em)</h3>
+      <h4>타이틀 4 - 폰트크기 16px(1em)(기본값)</h4>
+      <h5>타이틀 5 - 폰트크기 13.28px(0.83em)(잘안씀)</h5>
+      <h6>타이틀 6 - 폰트크기 10.72px(0.67em)(잘안씀)</h6>
       <!-- <H7>타이틀 7</H7> -->
     </div>
     <div>
-      <h3 style="background-color: aqua">문단</h3>
-      <p>문단 내용</p>
+      <h3 style="background-color: aqua">문단(paragraph)</h3>
+      <p>문단 내용 - 16px</p>
       <p>문단<br />내리기</p>
+      <p style="margin-bottom: 0">손흥민</p>
+      <p style="margin-top: 5">득점왕 수상</p>
     </div>
+
+    <div>
+      <h3 style="background-color: aqua">링크태그(link): a(anchor)</h3>
+      <p>href 속성 : (Hypertext Referrance) 내부에 해당하는 문서를 참조한다.</p>
+      <!-- 절대경로 : http 또는 https 로 시작되는 주소를 참조 -->
+      <a href="https://www.naver.com/"> 네이버 바로가기</a>
+      <!-- 상대경로 : 현재 문서파일을 기준으로 페이지 이동 시 사용-->
+      <a href="./sub.html">서브페이지로 이동</a>
+
+      <p>a 태그 내부에 href에서 작성되는 대표적인 속성값들</p>
+      <a href="tel: 01012345678">중국집으로 전화걸기</a>
+      <a href="mailto: custom@naver.com">고객센터 문의하기</a>
+      <a href="sms: 01012345678">000에게 문자 발송하기</a>
+      <a href="#top">상단으로 이동</a>
+      <a href="javascript: alert('안돼 돌아가')">브라우저 경고창 띄우기</a>
+
+      <p>a 태그 내부에 선언 가능한 그 밖의 속성</p>
+      <a href="https://www.naver.com/" target="_blank">네이버 새 탭에서 열기</a>
+
+    </div>
+    <div>
+      <h3>이미지 태그: img 태그는 src, alt 속성은 필수</h3>
+        <a href="https://www.airbnb.com/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/4494/4494647.png" 
+        alt="airbnb"
+        style="width: 100px;" 
+        />
+      </a> 
+      <img src="./img/kakao1.png" alt="카카오 이미지" style="width: 100px;" />
+      <img src="./img/kakao2.jpg" alt="카카오 이미지" style="width: 100px;" />
+      <img src="./img/kakao3.gif" alt="카카오 이미지" style="width: 100px;" />
+      <img src="./img/facebook.svg" alt="페이스북 아이콘 이미지" style="width: 100px;" />
+
+    </div>
+
+      <div>
+        <h3 style="background-color: aqua">그루핑이 가능한 태그: div, span</h3>
+        <div style="height: 100px; background-color: #eee;">header 영역</div>
+        <div style="height: 200px;background-color: #ffa;">banner 영역</div>
+        <div style="height: 400px;background: faa;">content 영역</div>
+        <div style="height: 80px;background-color: #000; color: #fff;">footer 영역</div>
+        <hr />
+      </div>
+        <header id="content" style="height: 100px; background-color: #eee;">header 영역</header>
+        <section id="banner" style="height: 200px;background-color: #ffa;">banner 영역</section>
+        <section style="height: 400px;background: faa;">content 영역</section>
+        <footer style="height: 80px;background-color: #000; color: #fff;">footer 영역</footer>
+        <hr />
+        <span style="color: red;">
+          <span style="color: green;">&copy;</span>samsung.co.kr
+        </span>
+        
+        <span>
+          <span style="color: blue; font-size: 32px;">5,000원</span>
+        </span>
+    </div>
+    <h4>구조 작성간 주의사항</h4>
+    <i>블록성질 내부에 블록성질 가능(단 말단 태그 내부에 말단 태그를 넣지 말 것)</i><br/>
+    <i>블록성질 내부에 인라인 성질을 포함하는 것 가능</i><br/>
+    <i>인라인 성질 내부에 인라인 성질을 포함하는 것 가능</i><br/>
+    <i>인라인성질 내부에 블록 성질을 포함시키는것은 피해야 함</i><br/>
+
+    
+    <h5>
+      블록성질1 
+      <p>블록성질2</p>
+    </h5>
+
+
+    <p>
+      블록성질3 
+      <h5>블록성질4</h5>
+    </p>
+    
+    <p style="text-align:right">
+      블록성질5 
+      <span style="color: #f00;">블록성질6</span>
+    </p>
+    <!-- (p(span(블록성질6))) -->
+
+    블록성질7
+    블록성질8
+    <!-- 인라인 성질의 엔터값 -->
+    
+    <div>
+      <h3 style="background-color: greenyellow;">텍스트 영역을 정의하는 태그</h3>
+      <p>강조 태그: 볼드, 이탤릭 처리</p>
+      <strong>볼드처리1</strong>
+      <b>볼드처리2</b>
+      <!-- 문자 두껍게 -->
+
+      <em>이탤릭처리1</em>
+      <i>이탤릭터리2</i>
+      <!-- 문자 기울임 -->
+
+      <p>취소선 : del</p>
+      <del>취소선</del>
+      <!-- 문자 취소선 -->
+    
+      <span><del>12,000원</del>=> 10,000원</span>
+      <!-- 예시 -->
+      
+      <p>상단표기, 하단표기</p>
+      <span>아이디 <sup style="color: red;">*</sup></span>
+      <span>CO<sub><small>2</small></sub></span>
+      
+      <p>글로벌화폐</p>
+      <span>$99.<small>99</small></span>
+      
+    </div>
+    
+    <hr />
+
+
+
+
   </body>
 </html>
